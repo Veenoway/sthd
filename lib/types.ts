@@ -1,0 +1,63 @@
+export type TokenCreator = {
+  handle?: string | null;
+  type?: string | null;
+};
+
+export type Token = {
+  tokenId: string;
+  name: string;
+  symbol: string;
+  chain: string;
+  chainId: number | null;
+  address: string | null;
+  caip2: string | null;
+  tradeUrl: string | null;
+  imageUrl: string | null;
+  imageUrlFallback?: string | null;
+  imageCid?: string | null;
+  description: string;
+  launchedAt: string | null;
+  launchedAtMs: number | null;
+  creator: TokenCreator | null;
+  deployrBadge?: string | null;
+  launchNarrative?: string | null;
+  sourceTweetUrl?: string | null;
+  originType?: string | null;
+  profile?: string | null;
+  launchSource?: string | null;
+  deploymentEnrichmentStatus?: string | null;
+  freshnessRank?: number | null;
+  marketCap?: number | null;
+  priceUsd?: number | null;
+  priceNative?: number | null;
+  priceChange24h?: number | null;
+  volume24h?: number | null;
+  liquidityUsd?: number | null;
+  holders?: number | null;
+  trades24h?: number | null;
+  graduated?: boolean | null;
+  graduationPercent?: number | null;
+  marketSource?: string | null;
+  feeProfile?: string | null;
+  creatorTaxBps?: number | null;
+  metadataUri?: string | null;
+  descriptionSource?: string | null;
+  curveAddress?: string | null;
+  poolAddress?: string | null;
+  totalSupply?: number | null;
+  circulatingSupply?: number | null;
+  nativeSymbol?: string | null;
+  athMarketCapUsd?: number | null;
+  lastTradeAt?: string | null;
+  status?: string | null;
+  transactionId?: string | null;
+  sparkline?: number[] | null;
+};
+
+export type TokenListResponse = {
+  ok: boolean;
+  tokens: Token[];
+  nextCursor: string | number | null;
+  count: number;
+  total: number;
+};
